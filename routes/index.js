@@ -1,8 +1,7 @@
-const express = require('express')
-const router = express.Router()
-
-router.get('/', (req, res) => {
-    res.send('hello, express')
-})
-
-module.exports = router
+module.exports = function(app){
+  require('./login')(app);
+  require('./home')(app);
+  require('./logout')(app);
+  require('./register')(app);
+  require('./cart')(app);
+}
